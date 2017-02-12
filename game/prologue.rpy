@@ -42,17 +42,17 @@ label start:
     "I hear the knock at my window again, clearly this time."
     Oshiro "Hold on a second!"
     "I throw off my sweat-drenched blanket and open the curtains and window."
-    show Oshiro at right
+    show Oshiro at right with moveinright
     "The cool morning air refreshes me, reminding me that my true existence is in a peaceful town, in a prospering country, in a world without dangers."
     "I put the nightmare out of my mind, rejecting it as the inconvenience it is. We’re used to doing so."
     Sem "Dummy! You’re going to be late!"
     "A faerie flies through the open window, looking frantic."
-    show Sem at left
+    show Sem at left with moveinleft
     Oshiro "Is it already that late?"
     Sem "Yeah, how could you sleep in so much?!"
     Oshiro "Now now, being a bit late is no big deal. Tell  friend  that I’ll be there soon, can you?"
     Sem "Fine. You owe me, you know!"
-    hide Sem
+    hide Sem with moveoutleft
     "She flutters away with a pout. I should probably thank her sometime for always waking me up when I’m late…"
     "Anyway, better get dressed. Classes won’t wait for my slow ass."
 
