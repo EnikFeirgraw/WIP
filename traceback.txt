@@ -1,21 +1,20 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/prologue.rpy", line 49, in script
-    o "Hold on a second!"
-Exception: Sayer 'o' is not defined.
+Exception: Not a displayable: <Character: u'girl'>
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/prologue.rpy", line 49, in script
-    o "Hold on a second!"
-  File "/Users/enikfeirgraw/Applications/renpy-6.99.11-sdk/renpy/ast.py", line 593, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "/Users/enikfeirgraw/Applications/renpy-6.99.11-sdk/renpy/ast.py", line 509, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
-Exception: Sayer 'o' is not defined.
+  File "/home/enikfeirgraw/assets.rpyc", line 9, in script
+  File "/usr/share/renpy/renpy/ast.py", line 911, in execute
+    renpy.exports.image(self.imgname, img)
+  File "/usr/share/renpy/renpy/exports.py", line 347, in image
+    d = renpy.easy.displayable(d)
+  File "/usr/share/renpy/renpy/easy.py", line 108, in displayable
+    raise Exception("Not a displayable: %r" % (d,))
+Exception: Not a displayable: <Character: u'girl'>
 
-Darwin-16.4.0-x86_64-i386-64bit
+Linux-3.8.11-x86_64-with-debian-jessie-sid
 Ren'Py 6.99.12.2.2029
 WIP 1.0
