@@ -10,12 +10,11 @@ label splashscreen:
 ## The game starts here.
 
 label start:
-
     ## Show a background. This uses a placeholder by default, but you can add a
     ## file (named either "bg room.png" or "bg room.jpg") to the images
     ## directory to show it.
 
-    scene bg room
+    #scene bg room
     ## Begin Prologue
 
     "It’s difficult to move."
@@ -23,6 +22,18 @@ label start:
     "Is it air? My lungs crave oxygen, so it can’t be air."
     "Perhaps I’m underwater. It’s too dark to tell."
     "Whatever it is, I can feel the pressure of miles upon miles of it piled on top of me, crushing me from every side."
+$ wake = 0
+if persistent.prologue_a == 1:
+    menu:
+        "Wait... This is a dream!":
+            $ wake = 1
+        "I can't breathe...":
+            pass
+else:
+    pass
+if wake == 1:
+    jump wakeup
+else:
     "Yet my life doesn’t wither. I just float there, uncomfortable."
     "It’s the kind of situation that you’d expect to hurt at some point, but although I feel the sensations, my mind doesn’t cry out in pain."
     "That’s all well and good. It would be bearable, even serene, if that were all there was."
@@ -55,5 +66,12 @@ label start:
     hide Sem with moveoutleft
     "She flutters away with a pout. I should probably thank her sometime for always waking me up when I’m late…"
     "Anyway, better get dressed. Classes won’t wait for my slow ass."
+    $ persistent.prologue_a = 1
+    return
 
+label wakeup:
+
+    "Glub glub glub said the fish"
+    "Oshiro wakes up. Yadda yadda"
+    "Your name is... [player_username]"
     return

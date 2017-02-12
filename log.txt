@@ -1,31 +1,31 @@
-Sat Feb 11 19:12:39 2017
-Linux-3.8.11-x86_64-with-debian-jessie-sid
+Sun Feb 12 10:53:23 2017
+Darwin-16.4.0-x86_64-i386-64bit
 Ren'Py 6.99.12.2.2029
  
 
-Bootstrap to the start of init.init took 0.14s
-Early init took 0.01s
-Loader init took 0.01s
-Loading error handling took 0.19s
-Loading script took 3.42s
-Loading persistent took 0.00s
+Bootstrap to the start of init.init took 0.07s
+Early init took 0.02s
+Loader init took 0.00s
+Loading error handling took 0.09s
+Loading script took 1.40s
+Loading persistent took 0.01s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.33s
+Running init code took 0.14s
 Loading analysis data took 0.00s
-Analyze and compile ATL took 0.01s
+Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to '/home/enikfeirgraw/.renpy/backups/WIP':
-Dump and make backups. took 0.08s
+Backing up script files to '/Users/enikfeirgraw/Library/RenPy/backups/WIP':
+Dump and make backups. took 0.04s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 DPI scale factor: 1.000000
-Creating interface object took 0.04s
+Creating interface object took 0.11s
 Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.01s
+Init translation took 0.03s
+Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.04s
-Save screen analysis took 0.10s
-Prepare screens took 0.18s
-Save pyanalysis. took 0.12s
-Save bytecode. took 0.07s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.04s
+Save bytecode. took 0.03s

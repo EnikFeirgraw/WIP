@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/prologue.rpy", line 50: end of line expected.
-    show Sem at left with moveinleft, zoom 0.5
-                                    ^
+File "game/prologue.rpy", line 32: else clause expects a non-empty block.
+    else:
+         ^
 
 Ren'Py Version: Ren'Py 6.99.12.2.2029
