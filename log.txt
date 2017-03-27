@@ -1,13 +1,13 @@
-Sun Feb 12 10:53:23 2017
+Mon Feb 20 21:39:52 2017
 Darwin-16.4.0-x86_64-i386-64bit
 Ren'Py 6.99.12.2.2029
  
 
-Bootstrap to the start of init.init took 0.07s
+Bootstrap to the start of init.init took 0.06s
 Early init took 0.02s
-Loader init took 0.00s
+Loader init took 0.01s
 Loading error handling took 0.09s
-Loading script took 1.40s
+Loading script took 1.39s
 Loading persistent took 0.01s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.14s
@@ -27,5 +27,5 @@ Load screen analysis took 0.00s
 Analyze screens took 0.02s
 Save screen analysis took 0.04s
 Prepare screens took 0.08s
-Save pyanalysis. took 0.04s
+Save pyanalysis. took 0.05s
 Save bytecode. took 0.03s

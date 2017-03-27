@@ -17,15 +17,23 @@ label start:
     #scene bg room
     ## Begin Prologue
 
-    scene black
-
     "It’s difficult to move."
     "The flailing of my arms and legs is suppressed by the thick air around me."
-    if persistent.prologue_a == 1:
-        "I {a=prologue_b}{color=#f00}struggle{/color}{/a} to discern my surroundings."
     "Is it air? My lungs crave oxygen, so it can’t be air."
     "Perhaps I’m underwater. It’s too dark to tell."
     "Whatever it is, I can feel the pressure of miles upon miles of it piled on top of me, crushing me from every side."
+$ wake = 0
+if persistent.prologue_a == 1:
+    menu:
+        "Wait... This is a dream!":
+            $ wake = 1
+        "I can't breathe...":
+            pass
+else:
+    pass
+if wake == 1:
+    jump wakeup
+else:
     "Yet my life doesn’t wither. I just float there, uncomfortable."
     "It’s the kind of situation that you’d expect to hurt at some point, but although I feel the sensations, my mind doesn’t cry out in pain."
     "That’s all well and good. It would be bearable, even serene, if that were all there was."
@@ -36,20 +44,12 @@ label start:
     "I can’t discern what it is, but I want to get away from it."
     "It’s closer than last time."
     "And that fills me with dread that I can’t explain."
-    play sound "./sound/knocking_1.ogg"
-    $ renpy.pause(1.0)
     "All of a sudden, a banging noise procures from directly behind me."
     "I instinctively twist my body towards the source of the sound. Impossible, how could it have gotten so close so suddenly?!"
-
-    "There’s nothing there"
-    play sound "./sound/knocking_2.ogg"
-    extend ", but the noise reverberates in my ears again."
+    "There’s nothing there, but the noise reverberates in my ears again."
     "Though, wait; it’s nothing like the steady rhythm of earlier."
     "I open my eyes."
-    scene bedroom with fade
     "Ah. It’s morning."
-    play sound "./sound/knocking_3.ogg"
-    $ renpy.pause(1.0)
     "I hear the knock at my window again, clearly this time."
     Oshiro "Hold on a second!"
     "I throw off my sweat-drenched blanket and open the curtains and window."
@@ -58,8 +58,7 @@ label start:
     "I put the nightmare out of my mind, rejecting it as the inconvenience it is. We’re used to doing so."
     Sem "Dummy! You’re going to be late!"
     "A faerie flies through the open window, looking frantic."
-    show Sem_flip at left with moveinleft:
-        yalign 0.5
+    show Sem at left with moveinleft
     Oshiro "Is it already that late?"
     Sem "Yeah, how could you sleep in so much?!"
     Oshiro "Now now, being a bit late is no big deal. Tell  friend  that I’ll be there soon, can you?"
@@ -70,14 +69,9 @@ label start:
     $ persistent.prologue_a = 1
     return
 
-label prologue_b:
+label wakeup:
 
-    "I thrash about madly, realizing this is naught but a nightmare!"
-    "If I don't wake up soon, it will all happen again; I'll have to relive that terror again"
-    "Suddenly, I hear a familiar voice call out to me"
-    Sem "Oshiro! Wake up!"
-    "It's Sem, calling to me from the corporeal realm"
-    Sem "Wake up or you'll be trapped in there forever!"
-    "I take one final breath of nonexistent air, and open my eyes..."
-    scene white with fade
+    "Glub glub glub said the fish"
+    "Oshiro wakes up. Yadda yadda"
+    "Your name is... [player_username]"
     return
